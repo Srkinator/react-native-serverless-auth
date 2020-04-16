@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {
+  useEffect
+} from 'react';
+import firebase from 'firebase';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { firebaseConfig } from './config'
+import SignUpForm from './components/SignUpForm';
+
+
 export default function App() {
+
+  useEffect(() => {
+    firebase.initializeApp(firebaseConfig);
+  }, [])
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <SignUpForm />
     </View>
   );
 }
@@ -14,6 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
 });
