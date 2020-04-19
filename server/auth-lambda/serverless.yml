@@ -11,8 +11,8 @@
 #
 # Happy Coding!
 
-service: auth-aws-lambda
-app: auth-aws-lambda-app
+service: auth-lambda
+app: auth-lambda-app
 org: srdjanpopovicdev
 
 # You can pin your service to only deploy with a specific Serverless version
